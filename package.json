@@ -1,0 +1,26 @@
+{
+  "name": "cslockwood-m11-notemaker",
+  "version": "1.0.0",
+  "description": "Note Taker assignment from the module 11 challenge as apart of the UCLA full stack bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VulnusR/CSLockwood-M11-NoteMaker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VulnusR/CSLockwood-M11-NoteMaker/issues"
+  },
+  "homepage": "https://github.com/VulnusR/CSLockwood-M11-NoteMaker#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
