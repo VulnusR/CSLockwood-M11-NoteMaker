@@ -46,5 +46,11 @@ app.post('/api/notes', (req, res) => {
     res.json(newNote);
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+   
+});
+
+
 // Start the server
 app.listen(PORT, () => console.log(`Server listening on PORT ${PORT}`));
