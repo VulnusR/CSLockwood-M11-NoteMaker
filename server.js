@@ -26,4 +26,22 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
+
+    // Read the existing notes from the db.json file
+    const notes = JSON.parse(fs.readFileSync(path.join(__dirname, 'db', 'db.json')));
+
+    // Assign a unique id to the new note
+    newNote.id = notes.length + 1;
+
+    // Add the new note to the array of notes
+    notes.push(newNote);
+
+    // Write the updated notes back to the db.json file
+    fs.writeFileSync(path.join(__dirname, 'db', 'db.json'), JSON.stringify(notes));
+
+    // Return the new note
+    res.json(newNote);
 });
+
+// Start the server
+app.listen(PORT, () => console.log(`Server listening on PORT ${PORT}`));
